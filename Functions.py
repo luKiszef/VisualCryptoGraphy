@@ -31,3 +31,16 @@ def encrypt_image(image_path, binary_message):
     encrypted_image_path = "encrypted_image.png"
     image.save(encrypted_image_path)
     return encrypted_image_path
+
+def decrypt_image(image_path, message_length):
+    image = Image.open(image_path)
+    width, height = image.size
+    binary_message = ""
+
+    for y in range(height):
+        for x in range(width):
+            pixel = image.getpixel((x, y))
+            for value in pixel:
+                binary_message += str(value & 1)
+
+    return binary_message[:message_length]
