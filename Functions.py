@@ -1,4 +1,5 @@
 from PIL import Image
+import tkinter as tk
 
 def text_to_binary(text):
     binary_string = ""
@@ -44,3 +45,7 @@ def decrypt_image(image_path, message_length):
                 binary_message += str(value & 1)
 
     return binary_message[:message_length]
+
+def animate_button(button):
+    button.config(relief=tk.SUNKEN)
+    button.after(100, lambda: button.config(relief=tk.RAISED))
