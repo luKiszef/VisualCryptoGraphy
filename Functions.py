@@ -46,6 +46,3 @@ def decrypt_image(image_path, message_length):
 
     return binary_message[:message_length]
 
-def animate_button(button):
-    button.config(relief=tk.SUNKEN)
-    button.after(100, lambda: button.config(relief=tk.RAISED))
