@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import filedialog, messagebox
-from Functions import encrypt_image, decrypt_image, text_to_binary, binary_to_text
+from functions import encrypt_image, decrypt_image, text_to_binary, binary_to_text
 
 def animate_button(button):
     button.config(relief=tk.SUNKEN)
