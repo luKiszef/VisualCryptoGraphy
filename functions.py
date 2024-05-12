@@ -1,5 +1,4 @@
 from PIL import Image
-import tkinter as tk
 
 def text_to_binary(text):
     binary_string = ""
